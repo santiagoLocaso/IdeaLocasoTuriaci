@@ -1,0 +1,332 @@
+body{	
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Nunito', sans-serif;
+} 
+
+@media only screen and (min-width: 1024px){
+	/*ESTILO INDEX*/
+	.gridPadreIndex{
+		display: grid;
+		grid-template-areas: 
+		"logo nav nav nav"
+		"main main main main"
+		"footer footer footer footer";
+		grid-template-rows: 100px 1fr 140px;
+		grid-template-columns: repeat(4, 25%);
+	}
+
+	header{
+		grid-area: logo;
+	}
+	section.nav-nav{
+		grid-area: nav;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+	}
+	main.contenedor{
+		grid-area: main;
+	}
+	.contenedor{
+		position: relative;
+		display: inline-block;
+		text-align: center;
+	}
+	.fondo{
+		width: 100%;
+		height: auto;
+	}
+	.subtituloEslogan{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 25px;
+	}
+	h2{
+		text-decoration: underline;
+		color: #ff4f4f;
+		word-spacing:5px
+	}
+	h3{
+		word-spacing:5px
+	}
+	footer.footerIndex{
+		grid-area: footer;
+		display: flex;
+	}
+	.contactoFooter{
+		font-size: 20px;
+	}
+	ul li {
+		text-decoration: none;
+		display: inline-block;
+		list-style: none;
+		position: sticky;
+		padding: 15px 10px;
+	}
+	a{
+		text-decoration: none;
+		color: black;
+		font-weight: bold;
+	}
+
+	/*ESTILO OBRAS*/
+	.gridPadreObras{
+		display: grid;
+		grid-template-areas: 
+		"logo nav nav nav"
+		"img img img img"
+		"footer footer footer footer";
+		grid-template-rows: 100px 1fr 140px;
+		grid-template-columns: repeat(4, 25%);
+	}
+	main.container{
+		grid-area: img;
+	}
+	.titulo__pagina{
+		align-items: center;
+	}
+	.container{
+		display: flex;
+		justify-content: center;
+	}
+	.container .card{
+		width: 338px;
+		height: 430px;
+		overflow: hidden;
+		margin: 20px;
+		text-align: center;
+	}
+	.container .card img{
+		width: 330px;
+		height: 220px;
+	}
+	.container .card h4{
+		font-weight: 600;
+	}
+	.containers .card p{
+		padding: 0 1rem;
+		font-size: 16px;
+		font-weight: 300;
+	}
+	.container .card a{
+		font-weight: 500;
+		text-decoration: none;
+		color: black;
+	}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px){
+	/*ESTILO INDEX MOBILE*/
+	.gridPadreIndex{
+		display: grid;
+		grid-template-areas: 
+		"logo"
+		"nav"
+		"main"
+		"footer";
+		grid-template-columns: 100%;
+		grid-template-rows: 100px 150px 1fr 350px 200px;
+	}
+	header.logo__inicio{
+		grid-area: logo;
+	}
+	.logo__inicio{
+		display: flex;
+		justify-content: center;
+		padding: 0%;
+	}
+	section.nav-nav{
+		grid-area: nav;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	} 
+	ul li{
+		display: flex;
+		flex-direction: column;
+		text-decoration: none;
+		text-align: center;
+		list-style: none;
+		padding: 5px 5px;
+	}
+	ul{
+		padding: 0;
+	}
+	a{
+		text-decoration: none;
+		color: black;
+		font-weight: bold;
+	}
+	main.contenedor.fondo{
+		grid-area: main;
+	}
+	.contenedor{
+		position: relative;
+		display: inline-block;
+		text-align: center;
+	}
+	.fondo{
+		max-width: 100%;
+    	height: 500px;
+	}
+	.subtituloEslogan{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 15px;
+	}
+	h2{
+		text-decoration: underline;
+		color: #ff4f4f;
+		word-spacing:5px
+	}
+	h3{
+		word-spacing:5px
+	}
+	footer{
+		grid-area: footer;
+	}
+	footer.contactoFooter{
+		grid-area: footer;
+	}
+	.textoContacto{
+		font-size: 20px;
+		color: black;
+	}
+	/*ESTILO OBRAS MOBILE*/
+	.gridPadreObras{
+		display: grid;
+		grid-template-areas: 
+		"logo"
+		"nav"
+		"img"
+		"footer";
+		grid-template-columns: 100%;
+		grid-template-rows: 100px 150px 1fr 350px 200px;
+	}
+	header.logo__inicio{
+		grid-area: logo;
+	}
+	.logo__inicio{
+		display: flex;
+		justify-content: center;
+		padding: 0%;
+	}
+	section.nav-nav{
+		grid-area: nav;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	} 
+	ul li{
+		display: flex;
+		flex-direction: column;
+		text-decoration: none;
+		text-align: center;
+		list-style: none;
+		padding: 5px 5px;
+	}
+	a{
+		text-decoration: none;
+		color: black;
+		font-weight: bold;
+	}
+	.titulo__pagina{
+		font-size: 35px;
+		text-decoration: underline;
+		color: #ff4f4f;
+	}
+	main.container{
+		grid-area: img;
+	}
+	.container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.container .card{
+		width: 338px;
+		height: 430px;
+		overflow: hidden;
+		margin: 20px;
+		text-align: center;
+	}
+	.container .card img{
+		width: 330px;
+		height: 220px;
+	}
+	.container .card h4{
+		font-weight: 600;
+	}
+	.containers .card p{
+		padding: 0 1rem;
+		font-size: 19px;
+		font-weight: 300;
+	}
+	.container .card a{
+		font-weight: 500;
+		text-decoration: none;
+		color: black;
+	}
+}
+
+/* estilo titulos: proyectos/obras/nosotros/contacto */
+
+
+
+/* subtitulo pagina proyectos */
+
+.subtitulo__proyectos{
+	position: relative;
+	text-align: center;
+	font-size: 25px;
+}
+/*pagina nosotros*/
+
+.quienes__somos{
+	text-align: center;
+	font-size: 30px;
+}
+
+/*pagina contacto*/
+
+.formulario{
+	position: relative;
+	left: 1050px;
+	top: 176px;
+}
+
+.casillas__form{
+	width: 300px;
+	height: 40px;
+}
+
+.casillas__form2{
+	width: 302px;
+}
+
+.boton{
+	position: relative;
+	left: 105px;
+	width: 100px;
+	 height: 50px;
+}
+
+.direccion{
+	position: relative;
+	left: 200px;
+	font-size: 20px;
+}
+
+.mapa{
+	position: relative;
+	left: 70px;
+}
+
+.ubicacion{
+	position: relative;
+	bottom: 278px;
+}
