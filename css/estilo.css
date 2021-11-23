@@ -11,7 +11,7 @@ body{
 		"logo nav nav nav"
 		"main main main main"
 		"footer footer footer footer";
-		grid-template-rows: 100px 1fr 140px;
+		grid-template-rows: 100px 1fr 286px;
 		grid-template-columns: repeat(4, 25%);
 	}
 
@@ -51,19 +51,41 @@ body{
 	h3{
 		word-spacing:5px
 	}
+
 	footer.footerIndex{
+		top: 5px;
 		grid-area: footer;
 		display: flex;
 	}
 	.contactoFooter{
 		font-size: 20px;
+		text-decoration: none;
+		display: flex;
+		flex-direction: row;
 	}
-	ul li {
+	.textoContacto{
+		padding: 5px;
+		list-style-type: none;
+	}
+	.nav-nav ul li {
 		text-decoration: none;
 		display: inline-block;
 		list-style: none;
-		position: sticky;
-		padding: 15px 10px;
+		margin: 0 20px;
+		position: relative;
+	}
+	.nav-nav ul li::before {
+		content: "";
+		height: 3px;
+		width: 0%;
+		background-color: black;
+		position: absolute;
+		left: 0;
+		bottom: -10px;
+		transition: 0.4s ease-out;
+	}
+	.nav-nav ul li:hover::before {
+		width: 100%;
 	}
 	a{
 		text-decoration: none;
